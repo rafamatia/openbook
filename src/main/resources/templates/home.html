@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>Open Book Library</title>
+
+<!--        <link rel="stylesheet" th:href="@{webjars/bootstrap/4.3.1/css/bootstrap.min.css}"/>-->
+<!--        <link rel="stylesheet" th:href="@{/css/main.css}"/>-->
+        <div th:replace="fragments/header :: header-css"/>
+    </head>
+
+    <body>
+        <!--<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+            <a class="navbar-brand" href="#">OpenBook.com</a>
+        </nav>-->
+        <div th:replace="fragments/header :: header"/>
+
+        <main role="main" class="container">
+
+            <div class="starter-template">
+                <h1>Open Book Library</h1>
+                <h2>
+                    <span th:text="'Hello, ' + ${message}"></span>
+                </h2>
+                <h2>1. Visit <a th:href="@{/admin}">Admin page (Spring Security protected, Need Admin Role)</a></h2>
+                <h2>2. Visit <a th:href="@{/user}">User page (Spring Security protected, Need User Role)</a></h2>
+                <h2>3. Visit <a th:href="@{/about}">Normal page</a></h2>
+            </div>
+
+        </main>
+        <!-- /.container -->
+
+<!--        <script type="text/javascript" th:src="@{webjars/bootstrap/4.3.1/js/bootstrap.min.js}"></script>-->
+        <div th:replace="fragments/footer :: footer"/>
+    </body>
+</html>
